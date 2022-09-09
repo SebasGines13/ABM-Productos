@@ -34,14 +34,16 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtDescripcion = new System.Windows.Forms.TextBox();
+            this.txtImagenURL = new System.Windows.Forms.TextBox();
             this.cbxMarca = new System.Windows.Forms.ComboBox();
             this.cbxCategoria = new System.Windows.Forms.ComboBox();
             this.btnAceptarAgregar = new System.Windows.Forms.Button();
             this.btnCancelarAgregar = new System.Windows.Forms.Button();
+            this.lblCategoria = new System.Windows.Forms.Label();
+            this.lblMarca = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblTituloAgregar
@@ -69,36 +71,38 @@
             resources.ApplyResources(this.label4, "label4");
             this.label4.Name = "label4";
             // 
-            // textBox1
+            // txtCodigo
             // 
-            resources.ApplyResources(this.textBox1, "textBox1");
-            this.textBox1.Name = "textBox1";
+            resources.ApplyResources(this.txtCodigo, "txtCodigo");
+            this.txtCodigo.Name = "txtCodigo";
             // 
-            // textBox2
+            // txtNombre
             // 
-            resources.ApplyResources(this.textBox2, "textBox2");
-            this.textBox2.Name = "textBox2";
+            resources.ApplyResources(this.txtNombre, "txtNombre");
+            this.txtNombre.Name = "txtNombre";
             // 
-            // textBox3
+            // txtDescripcion
             // 
-            resources.ApplyResources(this.textBox3, "textBox3");
-            this.textBox3.Name = "textBox3";
+            resources.ApplyResources(this.txtDescripcion, "txtDescripcion");
+            this.txtDescripcion.Name = "txtDescripcion";
             // 
-            // textBox4
+            // txtImagenURL
             // 
-            resources.ApplyResources(this.textBox4, "textBox4");
-            this.textBox4.Name = "textBox4";
+            resources.ApplyResources(this.txtImagenURL, "txtImagenURL");
+            this.txtImagenURL.Name = "txtImagenURL";
             // 
             // cbxMarca
             // 
-            resources.ApplyResources(this.cbxMarca, "cbxMarca");
+            this.cbxMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxMarca.FormattingEnabled = true;
+            resources.ApplyResources(this.cbxMarca, "cbxMarca");
             this.cbxMarca.Name = "cbxMarca";
             // 
             // cbxCategoria
             // 
-            resources.ApplyResources(this.cbxCategoria, "cbxCategoria");
+            this.cbxCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxCategoria.FormattingEnabled = true;
+            resources.ApplyResources(this.cbxCategoria, "cbxCategoria");
             this.cbxCategoria.Name = "cbxCategoria";
             // 
             // btnAceptarAgregar
@@ -106,6 +110,7 @@
             resources.ApplyResources(this.btnAceptarAgregar, "btnAceptarAgregar");
             this.btnAceptarAgregar.Name = "btnAceptarAgregar";
             this.btnAceptarAgregar.UseVisualStyleBackColor = true;
+            this.btnAceptarAgregar.Click += new System.EventHandler(this.btnAceptarAgregar_Click);
             // 
             // btnCancelarAgregar
             // 
@@ -114,20 +119,32 @@
             this.btnCancelarAgregar.UseVisualStyleBackColor = true;
             this.btnCancelarAgregar.Click += new System.EventHandler(this.btnCancelarAgregar_Click_1);
             // 
+            // lblCategoria
+            // 
+            resources.ApplyResources(this.lblCategoria, "lblCategoria");
+            this.lblCategoria.Name = "lblCategoria";
+            // 
+            // lblMarca
+            // 
+            resources.ApplyResources(this.lblMarca, "lblMarca");
+            this.lblMarca.Name = "lblMarca";
+            // 
             // frmAgregar
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ControlBox = false;
+            this.Controls.Add(this.lblMarca);
+            this.Controls.Add(this.lblCategoria);
             this.Controls.Add(this.btnCancelarAgregar);
             this.Controls.Add(this.btnAceptarAgregar);
             this.Controls.Add(this.cbxCategoria);
             this.Controls.Add(this.cbxMarca);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtImagenURL);
+            this.Controls.Add(this.txtDescripcion);
+            this.Controls.Add(this.txtNombre);
+            this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -140,6 +157,7 @@
             this.Opacity = 0.99D;
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
+            this.Load += new System.EventHandler(this.frmAgregar_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -152,13 +170,15 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtCodigo;
+        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.TextBox txtDescripcion;
+        private System.Windows.Forms.TextBox txtImagenURL;
         private System.Windows.Forms.ComboBox cbxMarca;
         private System.Windows.Forms.ComboBox cbxCategoria;
         private System.Windows.Forms.Button btnAceptarAgregar;
         private System.Windows.Forms.Button btnCancelarAgregar;
+        private System.Windows.Forms.Label lblCategoria;
+        private System.Windows.Forms.Label lblMarca;
     }
 }
