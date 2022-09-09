@@ -1,6 +1,6 @@
 ﻿namespace TPWinForm_goncalves_gines
 {
-    partial class Agregar
+    partial class frmAgregar
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAgregar));
             this.lblTituloAgregar = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -45,125 +46,79 @@
             // 
             // lblTituloAgregar
             // 
-            this.lblTituloAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTituloAgregar.AutoSize = true;
-            this.lblTituloAgregar.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTituloAgregar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lblTituloAgregar.Location = new System.Drawing.Point(450, 50);
+            resources.ApplyResources(this.lblTituloAgregar, "lblTituloAgregar");
             this.lblTituloAgregar.Name = "lblTituloAgregar";
-            this.lblTituloAgregar.Size = new System.Drawing.Size(208, 32);
-            this.lblTituloAgregar.TabIndex = 1;
-            this.lblTituloAgregar.Text = "Agregar Articulo";
-            this.lblTituloAgregar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(224, 178);
+            resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Descripcion";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(224, 150);
+            resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Nombre";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(224, 116);
+            resources.ApplyResources(this.label3, "label3");
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(40, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Codigo";
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(224, 209);
+            resources.ApplyResources(this.label4, "label4");
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 13);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "URL Imagen";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(320, 116);
+            resources.ApplyResources(this.textBox1, "textBox1");
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(87, 20);
-            this.textBox1.TabIndex = 6;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(320, 147);
+            resources.ApplyResources(this.textBox2, "textBox2");
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(490, 20);
-            this.textBox2.TabIndex = 7;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(320, 178);
+            resources.ApplyResources(this.textBox3, "textBox3");
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(490, 20);
-            this.textBox3.TabIndex = 8;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(320, 209);
+            resources.ApplyResources(this.textBox4, "textBox4");
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(490, 20);
-            this.textBox4.TabIndex = 9;
             // 
             // cbxMarca
             // 
+            resources.ApplyResources(this.cbxMarca, "cbxMarca");
             this.cbxMarca.FormattingEnabled = true;
-            this.cbxMarca.Location = new System.Drawing.Point(402, 257);
             this.cbxMarca.Name = "cbxMarca";
-            this.cbxMarca.Size = new System.Drawing.Size(121, 21);
-            this.cbxMarca.TabIndex = 10;
-            this.cbxMarca.Text = "Marca";
             // 
             // cbxCategoria
             // 
+            resources.ApplyResources(this.cbxCategoria, "cbxCategoria");
             this.cbxCategoria.FormattingEnabled = true;
-            this.cbxCategoria.Location = new System.Drawing.Point(554, 257);
             this.cbxCategoria.Name = "cbxCategoria";
-            this.cbxCategoria.Size = new System.Drawing.Size(121, 21);
-            this.cbxCategoria.TabIndex = 11;
-            this.cbxCategoria.Text = "Categoria";
             // 
             // btnAceptarAgregar
             // 
-            this.btnAceptarAgregar.Location = new System.Drawing.Point(380, 603);
+            resources.ApplyResources(this.btnAceptarAgregar, "btnAceptarAgregar");
             this.btnAceptarAgregar.Name = "btnAceptarAgregar";
-            this.btnAceptarAgregar.Size = new System.Drawing.Size(103, 33);
-            this.btnAceptarAgregar.TabIndex = 12;
-            this.btnAceptarAgregar.Text = "Aceptar";
             this.btnAceptarAgregar.UseVisualStyleBackColor = true;
             // 
             // btnCancelarAgregar
             // 
-            this.btnCancelarAgregar.Location = new System.Drawing.Point(732, 603);
+            resources.ApplyResources(this.btnCancelarAgregar, "btnCancelarAgregar");
             this.btnCancelarAgregar.Name = "btnCancelarAgregar";
-            this.btnCancelarAgregar.Size = new System.Drawing.Size(103, 33);
-            this.btnCancelarAgregar.TabIndex = 13;
-            this.btnCancelarAgregar.Text = "Cancelar";
             this.btnCancelarAgregar.UseVisualStyleBackColor = true;
             this.btnCancelarAgregar.Click += new System.EventHandler(this.btnCancelarAgregar_Click_1);
             // 
-            // Agregar
+            // frmAgregar
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(1100, 675);
             this.ControlBox = false;
             this.Controls.Add(this.btnCancelarAgregar);
             this.Controls.Add(this.btnAceptarAgregar);
@@ -181,12 +136,10 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Agregar";
+            this.Name = "frmAgregar";
             this.Opacity = 0.99D;
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Agregar";       
             this.ResumeLayout(false);
             this.PerformLayout();
 

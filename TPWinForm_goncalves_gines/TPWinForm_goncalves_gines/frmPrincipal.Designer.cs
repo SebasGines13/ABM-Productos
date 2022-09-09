@@ -1,6 +1,6 @@
 ﻿namespace TPWinForm_goncalves_gines
 {
-    partial class Aplicacion
+    partial class frmPrincipal
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Aplicacion));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.TLSMenu = new System.Windows.Forms.MenuStrip();
             this.agregarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -63,14 +63,14 @@
             resources.ApplyResources(this.buscarToolStripMenuItem, "buscarToolStripMenuItem");
             this.buscarToolStripMenuItem.Click += new System.EventHandler(this.buscarToolStripMenuItem_Click);
             // 
-            // Aplicacion
+            // frmPrincipal
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.TLSMenu);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.TLSMenu;
-            this.Name = "Aplicacion";
+            this.Name = "frmPrincipal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.TLSMenu.ResumeLayout(false);
             this.TLSMenu.PerformLayout();

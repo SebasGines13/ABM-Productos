@@ -121,6 +121,24 @@
     <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="agregarToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 20</value>
+  </data>
+  <data name="agregarToolStripMenuItem.Text" xml:space="preserve">
+    <value>Agregar</value>
+  </data>
+  <data name="listarToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 20</value>
+  </data>
+  <data name="listarToolStripMenuItem.Text" xml:space="preserve">
+    <value>Listar</value>
+  </data>
+  <data name="buscarToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 20</value>
+  </data>
+  <data name="buscarToolStripMenuItem.Text" xml:space="preserve">
+    <value>Buscar</value>
+  </data>
   <data name="TLSMenu.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
@@ -145,24 +163,6 @@
   </data>
   <data name="&gt;&gt;TLSMenu.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="agregarToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>61, 20</value>
-  </data>
-  <data name="agregarToolStripMenuItem.Text" xml:space="preserve">
-    <value>Agregar</value>
-  </data>
-  <data name="listarToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>47, 20</value>
-  </data>
-  <data name="listarToolStripMenuItem.Text" xml:space="preserve">
-    <value>Listar</value>
-  </data>
-  <data name="buscarToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>54, 20</value>
-  </data>
-  <data name="buscarToolStripMenuItem.Text" xml:space="preserve">
-    <value>Buscar</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -8313,7 +8313,7 @@
     <value>4, 3, 4, 3</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Aplicacion</value>
+    <value>ABM Productos</value>
   </data>
   <data name="&gt;&gt;agregarToolStripMenuItem.Name" xml:space="preserve">
     <value>agregarToolStripMenuItem</value>
@@ -8334,7 +8334,7 @@
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>Aplicacion</value>
+    <value>frmPrincipal</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>

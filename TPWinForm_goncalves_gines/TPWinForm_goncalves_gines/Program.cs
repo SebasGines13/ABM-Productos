@@ -16,7 +16,7 @@ namespace TPWinForm_goncalves_gines
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Aplicacion());
+            Application.Run(new frmPrincipal());
         }
     }
 }

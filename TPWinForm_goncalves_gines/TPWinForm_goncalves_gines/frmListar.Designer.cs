@@ -1,6 +1,6 @@
 ﻿namespace TPWinForm_goncalves_gines
 {
-    partial class Listar
+    partial class frmListar
     {
         /// <summary>
         /// Required designer variable.
@@ -29,9 +29,11 @@
         private void InitializeComponent()
         {
             this.lblTituloListar = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvArticulos = new System.Windows.Forms.DataGridView();
             this.btnCancelarListar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.pbxArticulo = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxArticulo)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTituloListar
@@ -47,13 +49,13 @@
             this.lblTituloListar.Text = "Listar Articulos";
             this.lblTituloListar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // dataGridView1
+            // dgvArticulos
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(180, 107);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(776, 386);
-            this.dataGridView1.TabIndex = 1;
+            this.dgvArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvArticulos.Location = new System.Drawing.Point(12, 103);
+            this.dgvArticulos.Name = "dgvArticulos";
+            this.dgvArticulos.Size = new System.Drawing.Size(657, 386);
+            this.dgvArticulos.TabIndex = 1;
             // 
             // btnCancelarListar
             // 
@@ -65,26 +67,37 @@
             this.btnCancelarListar.UseVisualStyleBackColor = true;
             this.btnCancelarListar.Click += new System.EventHandler(this.btnCancelarListar_Click);
             // 
-            // Listar
+            // pbxArticulo
+            // 
+            this.pbxArticulo.Location = new System.Drawing.Point(675, 103);
+            this.pbxArticulo.Name = "pbxArticulo";
+            this.pbxArticulo.Size = new System.Drawing.Size(413, 256);
+            this.pbxArticulo.TabIndex = 3;
+            this.pbxArticulo.TabStop = false;
+            // 
+            // frmListar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(1100, 675);
             this.ControlBox = false;
+            this.Controls.Add(this.pbxArticulo);
             this.Controls.Add(this.btnCancelarListar);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvArticulos);
             this.Controls.Add(this.lblTituloListar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Listar";
+            this.Name = "frmListar";
             this.Opacity = 0.99D;
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Listar";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.frmListar_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxArticulo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -93,7 +106,8 @@
         #endregion
 
         private System.Windows.Forms.Label lblTituloListar;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvArticulos;
         private System.Windows.Forms.Button btnCancelarListar;
+        private System.Windows.Forms.PictureBox pbxArticulo;
     }
 }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TPWinForm_goncalves_gines
 {
-    public partial class Aplicacion : Form
+    public partial class frmPrincipal : Form
     {
-        public Aplicacion()
+        public frmPrincipal()
         {
             InitializeComponent();
         }
@@ -21,11 +21,11 @@ namespace TPWinForm_goncalves_gines
         {
             foreach ( var item in Application.OpenForms)    //Evita que se puedan crear mas de 1 ventana del mismo tipo
             {
-                if (item.GetType() == typeof(Agregar))
+                if (item.GetType() == typeof(frmAgregar))
                     return;
             }
 
-            Agregar ventana = new Agregar();
+            frmAgregar ventana = new frmAgregar();
             ventana.Show();
             ventana.MdiParent = this;
                     
@@ -33,7 +33,7 @@ namespace TPWinForm_goncalves_gines
 
         private void listarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Listar ventana = new Listar();
+            frmListar ventana = new frmListar();
             ventana.Show();
             ventana.MdiParent = this;
         }

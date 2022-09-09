@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TPWinForm_goncalves_gines
 {
-    public partial class Agregar : Form
+    public partial class frmAgregar : Form
     {
-        public Agregar()
+        public frmAgregar()
         {
             InitializeComponent();
         }

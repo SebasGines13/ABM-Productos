@@ -46,11 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Agregar.cs">
+    <Compile Include="frmAgregar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Agregar.Designer.cs">
-      <DependentUpon>Agregar.cs</DependentUpon>
+    <Compile Include="frmAgregar.Designer.cs">
+      <DependentUpon>frmAgregar.cs</DependentUpon>
     </Compile>
     <Compile Include="Buscar.cs">
       <SubType>Form</SubType>
@@ -58,40 +58,40 @@
     <Compile Include="Buscar.Designer.cs">
       <DependentUpon>Buscar.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="frmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="frmPrincipal.Designer.cs">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Listar.cs">
+    <Compile Include="frmListar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Listar.Designer.cs">
-      <DependentUpon>Listar.cs</DependentUpon>
+    <Compile Include="frmListar.Designer.cs">
+      <DependentUpon>frmListar.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Agregar.resx">
-      <DependentUpon>Agregar.cs</DependentUpon>
+    <EmbeddedResource Include="frmAgregar.resx">
+      <DependentUpon>frmAgregar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Buscar.resx">
       <DependentUpon>Buscar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.aa-ER.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="frmPrincipal.aa-ER.resx">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.aa.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="frmPrincipal.aa.resx">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.es-419.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="frmPrincipal.es-419.resx">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Listar.resx">
-      <DependentUpon>Listar.cs</DependentUpon>
+    <EmbeddedResource Include="frmListar.resx">
+      <DependentUpon>frmListar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -114,6 +114,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\dominio\dominio.csproj">
+      <Project>{e279fbf5-6505-4bc5-aa18-d4d141467046}</Project>
+      <Name>dominio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\negocio\negocio.csproj">
+      <Project>{d6f7ca17-c275-4246-980a-8ce1627abce0}</Project>
+      <Name>negocio</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
