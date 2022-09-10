@@ -38,6 +38,7 @@ namespace negocio
                     aux.Descripcion = (string)lector["Descripcion"];
                     if (!(lector["ImagenUrl"] is DBNull))
                         aux.ImagenUrl = (string)lector["ImagenUrl"];
+                    aux.Precio = (decimal)lector["Precio"];
                     aux.Marca = new Marca();
                     aux.Marca.Id = (int)lector["IdMarca"];
                     aux.Marca.Descripcion = (string)lector["Marca"];
@@ -64,11 +65,15 @@ namespace negocio
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                //datos.setearConsulta("INSERT INTO POKEMONS (Numero, Nombre, Descripcion, Activo, IdTipo, IdDebilidad, UrlImagen) values (" + poke.Numero + ", '" + poke.Nombre + "', '" + poke.Descripcion + "', 1, @IdTipo, @IdDebilidad, @UrlImagen)");
-                //datos.setearParametro("@IdTipo", poke.Tipo.Id);
-                //datos.setearParametro("@IdDebilidad", poke.Debilidad.Id);
-                //datos.setearParametro("@UrlImagen", poke.UrlImagen);
-                //datos.ejecutarAccion();
+                datos.setearConsulta("INSERT INTO ARTICULOS (Codigo, Nombre, Descripcion, IdMarca, IdCategoria, ImagenUrl, Precio) VALUES (@Codigo, @Nombre, @Descripcion, @IdMarca, @IdCategoria, @ImagenUrl, @Precio)");
+                datos.setearParametro("@Codigo", artic.Codigo);
+                datos.setearParametro("@Nombre", artic.Nombre);
+                datos.setearParametro("@Descripcion", artic.Descripcion);
+                datos.setearParametro("@IdMarca", artic.Marca.Id);
+                datos.setearParametro("@IdCategoria", artic.Categoria.Id);
+                datos.setearParametro("@ImagenUrl", artic.ImagenUrl);
+                datos.setearParametro("@Precio", artic.Precio);
+                datos.ejecutarAccion();
             }
             catch (Exception ex)
             {
@@ -86,14 +91,15 @@ namespace negocio
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                //datos.setearConsulta("UPDATE ARTICULOS set Numero = @Numero, Nombre = @Nombre, Descripcion = @Descripcion, UrlImagen = @UrlImagen, IdTipo = @IdTipo, IdDebilidad = @IdDebilidad WHERE ID = @ID");
-                //datos.setearParametro("@Numero", poke.Numero);
-                //datos.setearParametro("@Nombre", poke.Nombre);
-                //datos.setearParametro("@Descripcion", poke.Descripcion);
-                //datos.setearParametro("@UrlImagen", poke.UrlImagen);
-                //datos.setearParametro("@IdTipo", poke.Tipo.Id);
-                //datos.setearParametro("@IdDebilidad", poke.Debilidad.Id);
-                //datos.setearParametro("@ID", poke.Id);
+                datos.setearConsulta("UPDATE ARTICULOS set Codigo = @Codigo, Nombre = @Nombre, Descripcion = @Descripcion, IdMarca = @IdMarca, IdCategoria = @IdCategoria, ImagenUrl = @ImagenUrl, Precio = @Precio WHERE ID = @ID");
+                datos.setearParametro("@Codigo", artic.Codigo);
+                datos.setearParametro("@Nombre", artic.Nombre);
+                datos.setearParametro("@Descripcion", artic.Descripcion);
+                datos.setearParametro("@IdMarca", artic.Marca.Id);
+                datos.setearParametro("@IdCategoria", artic.Categoria.Id);
+                datos.setearParametro("@ImagenUrl", artic.ImagenUrl);
+                datos.setearParametro("@Precio", artic.Precio);
+                datos.setearParametro("@ID", artic.Id);
                 datos.ejecutarAccion();
             }
             catch (Exception ex)

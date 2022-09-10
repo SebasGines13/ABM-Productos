@@ -29,47 +29,51 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAgregar));
-            this.lblTituloAgregar = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblTituloNuevoArticulo = new System.Windows.Forms.Label();
+            this.lblDescripcion = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.lblCodigo = new System.Windows.Forms.Label();
+            this.lblImagenUrl = new System.Windows.Forms.Label();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.txtImagenURL = new System.Windows.Forms.TextBox();
             this.cbxMarca = new System.Windows.Forms.ComboBox();
             this.cbxCategoria = new System.Windows.Forms.ComboBox();
-            this.btnAceptarAgregar = new System.Windows.Forms.Button();
+            this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelarAgregar = new System.Windows.Forms.Button();
             this.lblCategoria = new System.Windows.Forms.Label();
             this.lblMarca = new System.Windows.Forms.Label();
+            this.pbxArticulo = new System.Windows.Forms.PictureBox();
+            this.lblPrecio = new System.Windows.Forms.Label();
+            this.txtPrecio = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxArticulo)).BeginInit();
             this.SuspendLayout();
             // 
-            // lblTituloAgregar
+            // lblTituloNuevoArticulo
             // 
-            resources.ApplyResources(this.lblTituloAgregar, "lblTituloAgregar");
-            this.lblTituloAgregar.Name = "lblTituloAgregar";
+            resources.ApplyResources(this.lblTituloNuevoArticulo, "lblTituloNuevoArticulo");
+            this.lblTituloNuevoArticulo.Name = "lblTituloNuevoArticulo";
             // 
-            // label1
+            // lblDescripcion
             // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.Name = "label1";
+            resources.ApplyResources(this.lblDescripcion, "lblDescripcion");
+            this.lblDescripcion.Name = "lblDescripcion";
             // 
-            // label2
+            // lblNombre
             // 
-            resources.ApplyResources(this.label2, "label2");
-            this.label2.Name = "label2";
+            resources.ApplyResources(this.lblNombre, "lblNombre");
+            this.lblNombre.Name = "lblNombre";
             // 
-            // label3
+            // lblCodigo
             // 
-            resources.ApplyResources(this.label3, "label3");
-            this.label3.Name = "label3";
+            resources.ApplyResources(this.lblCodigo, "lblCodigo");
+            this.lblCodigo.Name = "lblCodigo";
             // 
-            // label4
+            // lblImagenUrl
             // 
-            resources.ApplyResources(this.label4, "label4");
-            this.label4.Name = "label4";
+            resources.ApplyResources(this.lblImagenUrl, "lblImagenUrl");
+            this.lblImagenUrl.Name = "lblImagenUrl";
             // 
             // txtCodigo
             // 
@@ -90,6 +94,7 @@
             // 
             resources.ApplyResources(this.txtImagenURL, "txtImagenURL");
             this.txtImagenURL.Name = "txtImagenURL";
+            this.txtImagenURL.Leave += new System.EventHandler(this.txtImagenURL_Leave);
             // 
             // cbxMarca
             // 
@@ -105,12 +110,12 @@
             resources.ApplyResources(this.cbxCategoria, "cbxCategoria");
             this.cbxCategoria.Name = "cbxCategoria";
             // 
-            // btnAceptarAgregar
+            // btnAceptar
             // 
-            resources.ApplyResources(this.btnAceptarAgregar, "btnAceptarAgregar");
-            this.btnAceptarAgregar.Name = "btnAceptarAgregar";
-            this.btnAceptarAgregar.UseVisualStyleBackColor = true;
-            this.btnAceptarAgregar.Click += new System.EventHandler(this.btnAceptarAgregar_Click);
+            resources.ApplyResources(this.btnAceptar, "btnAceptar");
+            this.btnAceptar.Name = "btnAceptar";
+            this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // btnCancelarAgregar
             // 
@@ -129,27 +134,46 @@
             resources.ApplyResources(this.lblMarca, "lblMarca");
             this.lblMarca.Name = "lblMarca";
             // 
+            // pbxArticulo
+            // 
+            resources.ApplyResources(this.pbxArticulo, "pbxArticulo");
+            this.pbxArticulo.Name = "pbxArticulo";
+            this.pbxArticulo.TabStop = false;
+            // 
+            // lblPrecio
+            // 
+            resources.ApplyResources(this.lblPrecio, "lblPrecio");
+            this.lblPrecio.Name = "lblPrecio";
+            // 
+            // txtPrecio
+            // 
+            resources.ApplyResources(this.txtPrecio, "txtPrecio");
+            this.txtPrecio.Name = "txtPrecio";
+            // 
             // frmAgregar
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ControlBox = false;
+            this.Controls.Add(this.txtPrecio);
+            this.Controls.Add(this.lblPrecio);
+            this.Controls.Add(this.pbxArticulo);
             this.Controls.Add(this.lblMarca);
             this.Controls.Add(this.lblCategoria);
             this.Controls.Add(this.btnCancelarAgregar);
-            this.Controls.Add(this.btnAceptarAgregar);
+            this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.cbxCategoria);
             this.Controls.Add(this.cbxMarca);
             this.Controls.Add(this.txtImagenURL);
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.txtCodigo);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.lblTituloAgregar);
+            this.Controls.Add(this.lblImagenUrl);
+            this.Controls.Add(this.lblCodigo);
+            this.Controls.Add(this.lblNombre);
+            this.Controls.Add(this.lblDescripcion);
+            this.Controls.Add(this.lblTituloNuevoArticulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -158,6 +182,7 @@
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.Load += new System.EventHandler(this.frmAgregar_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pbxArticulo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -165,20 +190,23 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lblTituloAgregar;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblTituloNuevoArticulo;
+        private System.Windows.Forms.Label lblDescripcion;
+        private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.Label lblCodigo;
+        private System.Windows.Forms.Label lblImagenUrl;
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.TextBox txtImagenURL;
         private System.Windows.Forms.ComboBox cbxMarca;
         private System.Windows.Forms.ComboBox cbxCategoria;
-        private System.Windows.Forms.Button btnAceptarAgregar;
+        private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button btnCancelarAgregar;
         private System.Windows.Forms.Label lblCategoria;
         private System.Windows.Forms.Label lblMarca;
+        private System.Windows.Forms.PictureBox pbxArticulo;
+        private System.Windows.Forms.Label lblPrecio;
+        private System.Windows.Forms.TextBox txtPrecio;
     }
 }

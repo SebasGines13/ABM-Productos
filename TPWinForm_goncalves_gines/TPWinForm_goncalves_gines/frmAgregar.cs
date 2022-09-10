@@ -14,12 +14,20 @@ namespace TPWinForm_goncalves_gines
 {
     public partial class frmAgregar : Form
     {
+        private Articulo articulo = null;
         public frmAgregar()
         {
             InitializeComponent();
         }
 
- 
+        public frmAgregar(Articulo artic)
+        {
+            InitializeComponent();
+            this.articulo = artic;
+            Text = "Modificar Articulo";
+        }
+
+
         private void btnCancelarAgregar_Click_1(object sender, EventArgs e)
         {
             this.Close();
@@ -29,42 +37,81 @@ namespace TPWinForm_goncalves_gines
         {
             MarcaNegocio marcaNegocio = new MarcaNegocio();
             CategoriaNegocio categoriaNegocio = new CategoriaNegocio();
-
             try
             {
                 cbxMarca.DataSource = marcaNegocio.listar();
+                cbxMarca.ValueMember = "Id";
+                cbxMarca.DisplayMember = "Descripcion";
                 cbxCategoria.DataSource = categoriaNegocio.listar();
+                cbxCategoria.ValueMember = "Id";
+                cbxCategoria.DisplayMember = "Descripcion";
+
+                if(articulo != null)
+                {
+                    txtCodigo.Text = articulo.Codigo;
+                    txtNombre.Text = articulo.Nombre;
+                    txtDescripcion.Text = articulo.Descripcion;
+                    txtImagenURL.Text = articulo.ImagenUrl;
+                    cargarImagen(articulo.ImagenUrl);
+                    txtPrecio.Text = articulo.Precio.ToString();
+                    cbxCategoria.SelectedValue = articulo.Categoria.Id;
+                    cbxMarca.SelectedValue = articulo.Marca.Id;
+                }
             }
             catch (Exception ex)
             {
-
-                throw ex;
+                MessageBox.Show(ex.ToString());
             }
         }
 
-        private void btnAceptarAgregar_Click(object sender, EventArgs e)
+        private void btnAceptar_Click(object sender, EventArgs e)
         {
-            Articulo artic = new Articulo();
             ArticuloNegocio artNegocio = new ArticuloNegocio();
             try
             {
-                //artic.Codigo = int.Parse(txtCodigo.Text);
-                artic.Codigo = txtCodigo.Text;
-                artic.Nombre = txtNombre.Text;
-                artic.Descripcion = txtDescripcion.Text;
-                artic.ImagenUrl = txtImagenURL.Text;
-                artic.Marca = (Marca)cbxMarca.SelectedItem;
-                artic.Categoria = (Categoria)cbxCategoria.SelectedItem;
+                if (articulo == null) // si está nulo, es porque es un alta de articulo
+                    articulo = new Articulo();
+                articulo.Codigo = txtCodigo.Text;
+                articulo.Nombre = txtNombre.Text;
+                articulo.Descripcion = txtDescripcion.Text;
+                articulo.ImagenUrl = txtImagenURL.Text;
+                articulo.Marca = (Marca)cbxMarca.SelectedItem;
+                articulo.Categoria = (Categoria)cbxCategoria.SelectedItem;
+                articulo.Precio = decimal.Parse(txtPrecio.Text);           
 
-                artNegocio.Agregar(artic);
-                MessageBox.Show("Cargado exitosamente");
+                if (articulo.Id != 0)
+                {
+                    artNegocio.Modificar(articulo);
+                    MessageBox.Show("Modificado exitosamente...");
+                }
+                else
+                {
+                    artNegocio.Agregar(articulo);
+                    MessageBox.Show("Agregado exitosamente...");
+                }
                 Close();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
-                throw;
+                MessageBox.Show(ex.ToString());
             }
+        }
+
+        private void cargarImagen(string imagen)
+        {
+            try
+            {
+                pbxArticulo.Load(imagen);
+            }
+            catch (Exception ex)
+            {
+                pbxArticulo.Load("https://media.istockphoto.com/vectors/image-preview-icon-picture-placeholder-for-website-or-uiux-design-vector-id1222357475?k=20&m=1222357475&s=170667a&w=0&h=YGycIDbBRAWkZaSvdyUFvotdGfnKhkutJhMOZtIoUKY=");
+            }
+        }
+
+        private void txtImagenURL_Leave(object sender, EventArgs e)
+        {
+            cargarImagen(txtImagenURL.Text);
         }
     }
 }

@@ -118,163 +118,163 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="lblTituloAgregar.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="lblTituloNuevoArticulo.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="lblTituloAgregar.AutoSize" type="System.Boolean, mscorlib">
+  <data name="lblTituloNuevoArticulo.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="lblTituloAgregar.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="lblTituloNuevoArticulo.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 20.25pt</value>
   </data>
-  <data name="lblTituloAgregar.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="lblTituloNuevoArticulo.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopCenter</value>
   </data>
-  <data name="lblTituloAgregar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>450, 50</value>
+  <data name="lblTituloNuevoArticulo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>112, 18</value>
   </data>
-  <data name="lblTituloAgregar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>208, 32</value>
+  <data name="lblTituloNuevoArticulo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>189, 32</value>
   </data>
-  <data name="lblTituloAgregar.TabIndex" type="System.Int32, mscorlib">
+  <data name="lblTituloNuevoArticulo.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="lblTituloAgregar.Text" xml:space="preserve">
-    <value>Agregar Articulo</value>
+  <data name="lblTituloNuevoArticulo.Text" xml:space="preserve">
+    <value>Nuevo Articulo</value>
   </data>
-  <data name="lblTituloAgregar.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="lblTituloNuevoArticulo.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopCenter</value>
   </data>
-  <data name="&gt;&gt;lblTituloAgregar.Name" xml:space="preserve">
-    <value>lblTituloAgregar</value>
+  <data name="&gt;&gt;lblTituloNuevoArticulo.Name" xml:space="preserve">
+    <value>lblTituloNuevoArticulo</value>
   </data>
-  <data name="&gt;&gt;lblTituloAgregar.Type" xml:space="preserve">
+  <data name="&gt;&gt;lblTituloNuevoArticulo.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;lblTituloAgregar.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lblTituloNuevoArticulo.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;lblTituloAgregar.ZOrder" xml:space="preserve">
-    <value>14</value>
+  <data name="&gt;&gt;lblTituloNuevoArticulo.ZOrder" xml:space="preserve">
+    <value>17</value>
   </data>
-  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+  <data name="lblDescripcion.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>224, 178</value>
+  <data name="lblDescripcion.Location" type="System.Drawing.Point, System.Drawing">
+    <value>49, 158</value>
   </data>
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>63, 13</value>
+  <data name="lblDescripcion.Size" type="System.Drawing.Size, System.Drawing">
+    <value>66, 13</value>
   </data>
-  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+  <data name="lblDescripcion.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>Descripcion</value>
+  <data name="lblDescripcion.Text" xml:space="preserve">
+    <value>Descripción:</value>
   </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
+  <data name="&gt;&gt;lblDescripcion.Name" xml:space="preserve">
+    <value>lblDescripcion</value>
   </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+  <data name="&gt;&gt;lblDescripcion.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lblDescripcion.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>13</value>
+  <data name="&gt;&gt;lblDescripcion.ZOrder" xml:space="preserve">
+    <value>16</value>
   </data>
-  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
+  <data name="lblNombre.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>224, 150</value>
+  <data name="lblNombre.Location" type="System.Drawing.Point, System.Drawing">
+    <value>68, 130</value>
   </data>
-  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 13</value>
+  <data name="lblNombre.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 13</value>
   </data>
-  <data name="label2.TabIndex" type="System.Int32, mscorlib">
+  <data name="lblNombre.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>Nombre</value>
+  <data name="lblNombre.Text" xml:space="preserve">
+    <value>Nombre:</value>
   </data>
-  <data name="&gt;&gt;label2.Name" xml:space="preserve">
-    <value>label2</value>
+  <data name="&gt;&gt;lblNombre.Name" xml:space="preserve">
+    <value>lblNombre</value>
   </data>
-  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+  <data name="&gt;&gt;lblNombre.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lblNombre.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>12</value>
+  <data name="&gt;&gt;lblNombre.ZOrder" xml:space="preserve">
+    <value>15</value>
   </data>
-  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
+  <data name="lblCodigo.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>224, 116</value>
+  <data name="lblCodigo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>72, 95</value>
   </data>
-  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 13</value>
+  <data name="lblCodigo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 13</value>
   </data>
-  <data name="label3.TabIndex" type="System.Int32, mscorlib">
+  <data name="lblCodigo.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
-  <data name="label3.Text" xml:space="preserve">
-    <value>Codigo</value>
+  <data name="lblCodigo.Text" xml:space="preserve">
+    <value>Codigo:</value>
   </data>
-  <data name="&gt;&gt;label3.Name" xml:space="preserve">
-    <value>label3</value>
+  <data name="&gt;&gt;lblCodigo.Name" xml:space="preserve">
+    <value>lblCodigo</value>
   </data>
-  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+  <data name="&gt;&gt;lblCodigo.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lblCodigo.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>11</value>
+  <data name="&gt;&gt;lblCodigo.ZOrder" xml:space="preserve">
+    <value>14</value>
   </data>
-  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
+  <data name="lblImagenUrl.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>224, 209</value>
+  <data name="lblImagenUrl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>45, 189</value>
   </data>
-  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>67, 13</value>
+  <data name="lblImagenUrl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 13</value>
   </data>
-  <data name="label4.TabIndex" type="System.Int32, mscorlib">
+  <data name="lblImagenUrl.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
-  <data name="label4.Text" xml:space="preserve">
-    <value>URL Imagen</value>
+  <data name="lblImagenUrl.Text" xml:space="preserve">
+    <value>URL Imagen:</value>
   </data>
-  <data name="&gt;&gt;label4.Name" xml:space="preserve">
-    <value>label4</value>
+  <data name="&gt;&gt;lblImagenUrl.Name" xml:space="preserve">
+    <value>lblImagenUrl</value>
   </data>
-  <data name="&gt;&gt;label4.Type" xml:space="preserve">
+  <data name="&gt;&gt;lblImagenUrl.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lblImagenUrl.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
-    <value>10</value>
+  <data name="&gt;&gt;lblImagenUrl.ZOrder" xml:space="preserve">
+    <value>13</value>
   </data>
   <data name="txtCodigo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>320, 116</value>
+    <value>118, 92</value>
   </data>
   <data name="txtCodigo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>87, 20</value>
+    <value>77, 20</value>
   </data>
   <data name="txtCodigo.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+    <value>0</value>
   </data>
   <data name="&gt;&gt;txtCodigo.Name" xml:space="preserve">
     <value>txtCodigo</value>
@@ -286,16 +286,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtCodigo.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>12</value>
   </data>
   <data name="txtNombre.Location" type="System.Drawing.Point, System.Drawing">
-    <value>320, 147</value>
+    <value>118, 127</value>
   </data>
   <data name="txtNombre.Size" type="System.Drawing.Size, System.Drawing">
-    <value>490, 20</value>
+    <value>281, 20</value>
   </data>
   <data name="txtNombre.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+    <value>1</value>
   </data>
   <data name="&gt;&gt;txtNombre.Name" xml:space="preserve">
     <value>txtNombre</value>
@@ -307,16 +307,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtNombre.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>11</value>
   </data>
   <data name="txtDescripcion.Location" type="System.Drawing.Point, System.Drawing">
-    <value>320, 178</value>
+    <value>118, 158</value>
   </data>
   <data name="txtDescripcion.Size" type="System.Drawing.Size, System.Drawing">
-    <value>490, 20</value>
+    <value>281, 20</value>
   </data>
   <data name="txtDescripcion.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
+    <value>2</value>
   </data>
   <data name="&gt;&gt;txtDescripcion.Name" xml:space="preserve">
     <value>txtDescripcion</value>
@@ -328,16 +328,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtDescripcion.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>10</value>
   </data>
   <data name="txtImagenURL.Location" type="System.Drawing.Point, System.Drawing">
-    <value>320, 209</value>
+    <value>118, 189</value>
   </data>
   <data name="txtImagenURL.Size" type="System.Drawing.Size, System.Drawing">
-    <value>490, 20</value>
+    <value>281, 20</value>
   </data>
   <data name="txtImagenURL.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
+    <value>3</value>
   </data>
   <data name="&gt;&gt;txtImagenURL.Name" xml:space="preserve">
     <value>txtImagenURL</value>
@@ -349,16 +349,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtImagenURL.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>9</value>
   </data>
   <data name="cbxMarca.Location" type="System.Drawing.Point, System.Drawing">
-    <value>380, 257</value>
+    <value>118, 298</value>
   </data>
   <data name="cbxMarca.Size" type="System.Drawing.Size, System.Drawing">
     <value>121, 21</value>
   </data>
   <data name="cbxMarca.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
+    <value>6</value>
   </data>
   <data name="&gt;&gt;cbxMarca.Name" xml:space="preserve">
     <value>cbxMarca</value>
@@ -370,16 +370,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;cbxMarca.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>8</value>
   </data>
   <data name="cbxCategoria.Location" type="System.Drawing.Point, System.Drawing">
-    <value>689, 257</value>
+    <value>118, 260</value>
   </data>
   <data name="cbxCategoria.Size" type="System.Drawing.Size, System.Drawing">
     <value>121, 21</value>
   </data>
   <data name="cbxCategoria.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
+    <value>5</value>
   </data>
   <data name="&gt;&gt;cbxCategoria.Name" xml:space="preserve">
     <value>cbxCategoria</value>
@@ -391,40 +391,40 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;cbxCategoria.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>7</value>
   </data>
-  <data name="btnAceptarAgregar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>380, 603</value>
+  <data name="btnAceptar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>52, 349</value>
   </data>
-  <data name="btnAceptarAgregar.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="btnAceptar.Size" type="System.Drawing.Size, System.Drawing">
     <value>103, 33</value>
   </data>
-  <data name="btnAceptarAgregar.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
+  <data name="btnAceptar.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
   </data>
-  <data name="btnAceptarAgregar.Text" xml:space="preserve">
+  <data name="btnAceptar.Text" xml:space="preserve">
     <value>Aceptar</value>
   </data>
-  <data name="&gt;&gt;btnAceptarAgregar.Name" xml:space="preserve">
-    <value>btnAceptarAgregar</value>
+  <data name="&gt;&gt;btnAceptar.Name" xml:space="preserve">
+    <value>btnAceptar</value>
   </data>
-  <data name="&gt;&gt;btnAceptarAgregar.Type" xml:space="preserve">
+  <data name="&gt;&gt;btnAceptar.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;btnAceptarAgregar.Parent" xml:space="preserve">
+  <data name="&gt;&gt;btnAceptar.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;btnAceptarAgregar.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="&gt;&gt;btnAceptar.ZOrder" xml:space="preserve">
+    <value>6</value>
   </data>
   <data name="btnCancelarAgregar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>732, 603</value>
+    <value>184, 349</value>
   </data>
   <data name="btnCancelarAgregar.Size" type="System.Drawing.Size, System.Drawing">
     <value>103, 33</value>
   </data>
   <data name="btnCancelarAgregar.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
+    <value>8</value>
   </data>
   <data name="btnCancelarAgregar.Text" xml:space="preserve">
     <value>Cancelar</value>
@@ -439,13 +439,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnCancelarAgregar.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>5</value>
   </data>
   <data name="lblCategoria.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="lblCategoria.Location" type="System.Drawing.Point, System.Drawing">
-    <value>583, 265</value>
+    <value>63, 260</value>
   </data>
   <data name="lblCategoria.Size" type="System.Drawing.Size, System.Drawing">
     <value>52, 13</value>
@@ -466,22 +466,22 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblCategoria.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>4</value>
   </data>
   <data name="lblMarca.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="lblMarca.Location" type="System.Drawing.Point, System.Drawing">
-    <value>256, 257</value>
+    <value>75, 301</value>
   </data>
   <data name="lblMarca.Size" type="System.Drawing.Size, System.Drawing">
-    <value>37, 13</value>
+    <value>40, 13</value>
   </data>
   <data name="lblMarca.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
   </data>
   <data name="lblMarca.Text" xml:space="preserve">
-    <value>Marca</value>
+    <value>Marca:</value>
   </data>
   <data name="&gt;&gt;lblMarca.Name" xml:space="preserve">
     <value>lblMarca</value>
@@ -493,6 +493,81 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblMarca.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="pbxArticulo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>416, 75</value>
+  </data>
+  <data name="pbxArticulo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>383, 296</value>
+  </data>
+  <data name="pbxArticulo.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="pbxArticulo.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;pbxArticulo.Name" xml:space="preserve">
+    <value>pbxArticulo</value>
+  </data>
+  <data name="&gt;&gt;pbxArticulo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pbxArticulo.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pbxArticulo.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lblPrecio.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblPrecio.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblPrecio.Location" type="System.Drawing.Point, System.Drawing">
+    <value>75, 228</value>
+  </data>
+  <data name="lblPrecio.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 13</value>
+  </data>
+  <data name="lblPrecio.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="lblPrecio.Text" xml:space="preserve">
+    <value>Precio:</value>
+  </data>
+  <data name="&gt;&gt;lblPrecio.Name" xml:space="preserve">
+    <value>lblPrecio</value>
+  </data>
+  <data name="&gt;&gt;lblPrecio.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblPrecio.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblPrecio.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="txtPrecio.Location" type="System.Drawing.Point, System.Drawing">
+    <value>118, 225</value>
+  </data>
+  <data name="txtPrecio.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 20</value>
+  </data>
+  <data name="txtPrecio.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;txtPrecio.Name" xml:space="preserve">
+    <value>txtPrecio</value>
+  </data>
+  <data name="&gt;&gt;txtPrecio.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtPrecio.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtPrecio.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -502,7 +577,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1100, 675</value>
+    <value>830, 422</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
