@@ -32,7 +32,6 @@
             this.TLSMenu = new System.Windows.Forms.MenuStrip();
             this.agregarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.buscarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TLSMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -40,8 +39,7 @@
             // 
             this.TLSMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.agregarToolStripMenuItem,
-            this.listarToolStripMenuItem,
-            this.buscarToolStripMenuItem});
+            this.listarToolStripMenuItem});
             resources.ApplyResources(this.TLSMenu, "TLSMenu");
             this.TLSMenu.Name = "TLSMenu";
             // 
@@ -56,12 +54,6 @@
             this.listarToolStripMenuItem.Name = "listarToolStripMenuItem";
             resources.ApplyResources(this.listarToolStripMenuItem, "listarToolStripMenuItem");
             this.listarToolStripMenuItem.Click += new System.EventHandler(this.listarToolStripMenuItem_Click);
-            // 
-            // buscarToolStripMenuItem
-            // 
-            this.buscarToolStripMenuItem.Name = "buscarToolStripMenuItem";
-            resources.ApplyResources(this.buscarToolStripMenuItem, "buscarToolStripMenuItem");
-            this.buscarToolStripMenuItem.Click += new System.EventHandler(this.buscarToolStripMenuItem_Click);
             // 
             // frmPrincipal
             // 
@@ -84,7 +76,6 @@
         private System.Windows.Forms.MenuStrip TLSMenu;
         private System.Windows.Forms.ToolStripMenuItem agregarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem buscarToolStripMenuItem;
     }
 }
 

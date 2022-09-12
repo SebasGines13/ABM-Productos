@@ -38,11 +38,5 @@ namespace TPWinForm_goncalves_gines
             ventana.MdiParent = this;
         }
 
-        private void buscarToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Buscar ventana = new Buscar();
-            ventana.Show();
-            ventana.MdiParent = this;
-        }
     }
 }

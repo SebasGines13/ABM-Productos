@@ -25,6 +25,7 @@ namespace TPWinForm_goncalves_gines
             InitializeComponent();
             this.articulo = artic;
             Text = "Modificar Articulo";
+            lblTituloNuevoArticulo.Text = "Modificar Articulo";
         }
 
 
