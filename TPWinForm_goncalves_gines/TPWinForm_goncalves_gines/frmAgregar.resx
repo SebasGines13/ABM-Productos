@@ -270,6 +270,9 @@
   <data name="txtCodigo.Location" type="System.Drawing.Point, System.Drawing">
     <value>118, 92</value>
   </data>
+  <data name="txtCodigo.MaxLength" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
   <data name="txtCodigo.Size" type="System.Drawing.Size, System.Drawing">
     <value>77, 20</value>
   </data>

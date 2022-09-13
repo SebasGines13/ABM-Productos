@@ -33,8 +33,11 @@ namespace TPWinForm_goncalves_gines
             cboCampo.Items.Add("Marca");
             cboCampo.Items.Add("Categoría");
             cboCampo.Items.Add("Precio");
-        }
+            cboCampo.SelectedIndex = -1;
+            cboCriterio.SelectedIndex = -1;
 
+        }
+        
         private void cargar()
         {
             ArticuloNegocio negocio = new ArticuloNegocio();

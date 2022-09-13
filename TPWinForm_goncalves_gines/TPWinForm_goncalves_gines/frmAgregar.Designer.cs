@@ -79,16 +79,19 @@
             // 
             resources.ApplyResources(this.txtCodigo, "txtCodigo");
             this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Leave += new System.EventHandler(this.txtCodigo_Leave);
             // 
             // txtNombre
             // 
             resources.ApplyResources(this.txtNombre, "txtNombre");
             this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Leave += new System.EventHandler(this.txtNombre_Leave);
             // 
             // txtDescripcion
             // 
             resources.ApplyResources(this.txtDescripcion, "txtDescripcion");
             this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Leave += new System.EventHandler(this.txtDescripcion_Leave);
             // 
             // txtImagenURL
             // 
@@ -149,13 +152,13 @@
             // 
             resources.ApplyResources(this.txtPrecio, "txtPrecio");
             this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.Leave += new System.EventHandler(this.txtPrecio_Leave);
             // 
             // frmAgregar
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ControlBox = false;
             this.Controls.Add(this.txtPrecio);
             this.Controls.Add(this.lblPrecio);
             this.Controls.Add(this.pbxArticulo);
@@ -174,7 +177,7 @@
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.lblDescripcion);
             this.Controls.Add(this.lblTituloNuevoArticulo);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmAgregar";
