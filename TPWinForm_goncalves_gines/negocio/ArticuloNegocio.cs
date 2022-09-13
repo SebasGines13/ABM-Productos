@@ -92,7 +92,7 @@ namespace negocio
             try
             {
                 datos.setearConsulta("UPDATE ARTICULOS set Codigo = @Codigo, Nombre = @Nombre, Descripcion = @Descripcion, IdMarca = @IdMarca, IdCategoria = @IdCategoria, ImagenUrl = @ImagenUrl, Precio = @Precio WHERE ID = @ID");
-                datos.setearParametro("@Codigo", artic.Codigo);
+                datos.setearParametro("@Codigo", artic.Codigo); //System.NullReferenceException 
                 datos.setearParametro("@Nombre", artic.Nombre);
                 datos.setearParametro("@Descripcion", artic.Descripcion);
                 datos.setearParametro("@IdMarca", artic.Marca.Id);
