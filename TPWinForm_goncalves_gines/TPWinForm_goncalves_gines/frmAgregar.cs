@@ -101,28 +101,33 @@ namespace TPWinForm_goncalves_gines
             try
             {
                 if (articulo == null)
-                {  // si está nulo, es porque es un alta de articulo
-                    articulo = new Articulo();
-                    articulo.Codigo = txtCodigo.Text;
-                    articulo.Nombre = txtNombre.Text;
-                    articulo.Descripcion = txtDescripcion.Text;
-                    articulo.ImagenUrl = txtImagenURL.Text;
-                    articulo.Marca = (Marca)cbxMarca.SelectedItem;
-                    articulo.Categoria = (Categoria)cbxCategoria.SelectedItem;
-                    articulo.Precio = decimal.Parse(txtPrecio.Text);
+                    articulo = new Articulo();  // si está nulo, es porque es un alta de articulo
+                articulo.Codigo = txtCodigo.Text;
+                articulo.Nombre = txtNombre.Text;
+                articulo.Descripcion = txtDescripcion.Text;
+                articulo.ImagenUrl = txtImagenURL.Text;
+                articulo.Marca = (Marca)cbxMarca.SelectedItem;
+                articulo.Categoria = (Categoria)cbxCategoria.SelectedItem;
+                articulo.Precio = decimal.Parse(txtPrecio.Text);
+                if (articulo.Id != 0)
+                {
+                    if (validarNulosOVacios())
+                    {
+                        artNegocio.Modificar(articulo);
+                        MessageBox.Show("¡Modificado exitosamente!");
+                        Close();
+                    }
+                }
+                else
+                {
                     if (validarNulosOVacios())
                     {
                         artNegocio.Agregar(articulo);
                         MessageBox.Show("¡Agregado exitosamente!");
                         Close();
                     }
-                    else articulo = null;
-                }
-                else {
-                    artNegocio.Modificar(articulo);
-                    MessageBox.Show("¡Modificado exitosamente!");
-                    Close();
-                }                
+                    else articulo = null; // Esto lo hacemos porque sino interpretaba que debía realizar un UPDATE y pinchaba como loco!
+                }     
             }
             catch (FormatException)
             {
