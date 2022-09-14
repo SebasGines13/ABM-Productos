@@ -93,11 +93,20 @@ namespace TPWinForm_goncalves_gines
         private void btnModificar_Click(object sender, EventArgs e)
         {
             Articulo seleccionado;
-            seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
-
-            frmAgregar modificar = new frmAgregar(seleccionado);
-            modificar.ShowDialog();
-            cargar();
+            try
+            {
+                if(dgvArticulos.CurrentRow.DataBoundItem != null)
+                {
+                    seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+                    frmAgregar modificar = new frmAgregar(seleccionado);
+                    modificar.ShowDialog();
+                    cargar();
+                }                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }          
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -112,7 +121,7 @@ namespace TPWinForm_goncalves_gines
                     seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
                     negocio.Eliminar(seleccionado.Id);
                     cargar();
-                }
+                }                
             }
             catch (Exception ex)
             {
@@ -131,6 +140,16 @@ namespace TPWinForm_goncalves_gines
                 string criterio = cboCriterio.SelectedItem.ToString();
                 string filtro = txtFiltroAvanzado.Text;
                 dgvArticulos.DataSource = negocio.filtrar(campo, criterio, filtro);
+                if(dgvArticulos.Rows.Count == 0)
+                {
+                    btnModificar.Enabled = false;
+                    btnEliminar.Enabled = false;
+                }
+                else
+                {
+                    btnModificar.Enabled = true;
+                    btnEliminar.Enabled = true;
+                }
             }
             catch (Exception ex)
             {
