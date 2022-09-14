@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.Configuration;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,7 +16,6 @@ namespace TPWinForm_goncalves_gines
     public partial class frmAgregar : Form
     {
         private Articulo articulo = null;
-        int cont = 0;
         public frmAgregar()
         {
             InitializeComponent();
@@ -50,9 +50,8 @@ namespace TPWinForm_goncalves_gines
                 cbxCategoria.DisplayMember = "Descripcion";
                 cbxMarca.SelectedIndex = -1;    //Para que nazca sin ninguna opcion seleccionada
                 cbxCategoria.SelectedIndex = -1;
-                
 
-                if (articulo != null)
+                if(articulo != null)
                 {
                     txtCodigo.Text = articulo.Codigo;
                     txtNombre.Text = articulo.Nombre;
@@ -69,68 +68,35 @@ namespace TPWinForm_goncalves_gines
                 MessageBox.Show(ex.ToString());
             }
         }
-        private bool validarFiltroMarca() 
-        {
-            if ( cbxMarca.SelectedIndex < 0 ) {
-                MessageBox.Show("Debe seleccionar un valor para Marca");
-                return true;
-            }
-            return false;
-        }
-        private bool validarFiltroCategoria()
-        {
-            if ( cbxCategoria.SelectedIndex < 0 )
-            {
-                MessageBox.Show("Debe seleccionar un valor para Categoria");
-                return true;
-            }
-            return false;
-        }
-        private bool validarSoloNumeros(string cad) 
-        {
-            foreach(char caracter in cad) 
-            {
-                if (!(char.IsNumber(caracter)))
-                {
-                    return false;
-                }
-            }
-            return true;
-        }
 
-        private void validacionEntrada()
-        {          
+        private bool validarNulosOVacios()
+        {
+            string msj = null;
+            decimal number;
             if (string.IsNullOrEmpty(txtCodigo.Text))
-            {
-                MessageBox.Show("Falta cargar el campo Codigo");
-            }
+                msj += "Falta cargar el campo Codigo";
             if (string.IsNullOrEmpty(txtNombre.Text))
-            {
-                MessageBox.Show("Falta cargar el campo Nombre");
-            }
+                msj += "\nFalta cargar el campo Nombre";
             if (string.IsNullOrEmpty(txtDescripcion.Text))
-            {
-                MessageBox.Show("Falta cargar el campo Descripcion");
-            }
+                msj += "\nFalta cargar el campo Descripcion";
             if (string.IsNullOrEmpty(txtImagenURL.Text))
-            {
-                MessageBox.Show("Falta cargar el campo Imagen URL");
-            }          
+                msj += "\nFalta cargar el campo Imagen URL";
             if (string.IsNullOrEmpty(txtPrecio.Text))
-            {
-                MessageBox.Show("Falta cargar el campo Precio");
-            }
-            if (validarSoloNumeros(txtPrecio.Text))
-            {
-                MessageBox.Show("Solo puede ingresar numeros en el campo Precio");              
-            }
-            validarFiltroMarca();
-            validarFiltroCategoria();                                  
+                msj += "\nFalta cargar el campo Precio";
+            if (!(Decimal.TryParse(txtPrecio.Text, out number)))
+                msj += "\nSolo puede ingresar numeros en el campo Precio";
+            if (cbxMarca.SelectedIndex < 0)
+                msj += "\nDebe seleccionar un valor para Marca";
+            if (cbxCategoria.SelectedIndex < 0)
+                msj += "\nDebe seleccionar un valor para Categoria";
+            if(msj != null) 
+                MessageBox.Show(msj);
+            return string.IsNullOrEmpty(msj);
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            
+
             ArticuloNegocio artNegocio = new ArticuloNegocio();
             try
             {
@@ -144,30 +110,29 @@ namespace TPWinForm_goncalves_gines
                     articulo.Marca = (Marca)cbxMarca.SelectedItem;
                     articulo.Categoria = (Categoria)cbxCategoria.SelectedItem;
                     articulo.Precio = decimal.Parse(txtPrecio.Text);
-                    validacionEntrada();
-                    artNegocio.Agregar(articulo);
-                    MessageBox.Show("¡Agregado exitosamente!");
+                    if (validarNulosOVacios())
+                    {
+                        artNegocio.Agregar(articulo);
+                        MessageBox.Show("¡Agregado exitosamente!");
+                        Close();
+                    }
+                    else articulo = null;
                 }
-                else { MessageBox.Show("Faltan Cargar Datos"); }
-
-                if (articulo.Id != 0)   //Ver como validar esto 
-                {
+                else {
                     artNegocio.Modificar(articulo);
                     MessageBox.Show("¡Modificado exitosamente!");
-                }
-
-                Close();
-
+                    Close();
+                }                
             }
             catch (FormatException)
             {
-                MessageBox.Show("El formato no corresponde con este campo");
+                MessageBox.Show("Debe ingresar un valor númerico en precio");
+                articulo = null;
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.ToString());
-            }                               
+            }
         }
 
 
@@ -186,54 +151,38 @@ namespace TPWinForm_goncalves_gines
         private void txtImagenURL_Leave(object sender, EventArgs e)
         {
             if (txtImagenURL.Text == "")
-            {
                 txtImagenURL.BackColor = Color.DarkSalmon;
-                cont++;
-            }
-            else
-            {
+            else            
                 txtImagenURL.BackColor = System.Drawing.SystemColors.Control;
-                cargarImagen(txtImagenURL.Text);
-            }
-        }
+            cargarImagen(txtImagenURL.Text);        
+    }
 
         private void txtCodigo_Leave(object sender, EventArgs e)
         {
             if (txtCodigo.Text == "")
-            {
+
                 txtCodigo.BackColor = Color.DarkSalmon;
-                cont++;
-            }
             else txtCodigo.BackColor = System.Drawing.SystemColors.Control;
         }
 
         private void txtNombre_Leave(object sender, EventArgs e)
         {
             if (txtNombre.Text == "")
-            {
                 txtNombre.BackColor = Color.DarkSalmon  ;
-                cont++;
-            }
             else txtNombre.BackColor = System.Drawing.SystemColors.Control;
         }
 
         private void txtDescripcion_Leave(object sender, EventArgs e)
         {
             if (txtDescripcion.Text == "")
-            {
                 txtDescripcion.BackColor = Color.DarkSalmon;
-                cont++;
-            }
             else txtDescripcion.BackColor = System.Drawing.SystemColors.Control;
         }
 
         private void txtPrecio_Leave(object sender, EventArgs e)
         {
             if (txtPrecio.Text == "") 
-            {
                 txtPrecio.BackColor = Color.DarkSalmon;
-                cont++;
-            }
             else { txtPrecio.BackColor = System.Drawing.SystemColors.Control; }
         }
     }

@@ -77,6 +77,7 @@
             // 
             // txtCodigo
             // 
+            this.txtCodigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             resources.ApplyResources(this.txtCodigo, "txtCodigo");
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Leave += new System.EventHandler(this.txtCodigo_Leave);
@@ -95,6 +96,8 @@
             // 
             // txtImagenURL
             // 
+            this.txtImagenURL.BackColor = System.Drawing.SystemColors.Window;
+            this.txtImagenURL.ForeColor = System.Drawing.SystemColors.WindowText;
             resources.ApplyResources(this.txtImagenURL, "txtImagenURL");
             this.txtImagenURL.Name = "txtImagenURL";
             this.txtImagenURL.Leave += new System.EventHandler(this.txtImagenURL_Leave);
