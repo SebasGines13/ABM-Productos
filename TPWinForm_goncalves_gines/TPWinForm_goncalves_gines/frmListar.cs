@@ -58,11 +58,6 @@ namespace TPWinForm_goncalves_gines
         {
             dgvArticulos.Columns["ImagenUrl"].Visible = false;
             dgvArticulos.Columns["Id"].Visible = false;
-            dgvArticulos.Columns["Código"].Width = 50;
-            dgvArticulos.Columns["Descripción"].Width = 50;
-            dgvArticulos.Columns["Marca"].Width = 20;
-            dgvArticulos.Columns["Categoría"].Width = 20;
-            dgvArticulos.Columns["Precio"].Width = 10;
         }
 
         private void limpiarFiltros()
