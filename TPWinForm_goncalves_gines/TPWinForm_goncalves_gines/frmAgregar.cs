@@ -16,6 +16,7 @@ namespace TPWinForm_goncalves_gines
     public partial class frmAgregar : Form
     {
         private Articulo articulo = null;
+        private int modo = 0;
         public frmAgregar()
         {
             InitializeComponent();
@@ -27,6 +28,15 @@ namespace TPWinForm_goncalves_gines
             this.articulo = artic;
             Text = "Modificar Articulo";
             lblTituloNuevoArticulo.Text = "Modificar Articulo";
+        }
+
+        public frmAgregar(Articulo artic, int modo)
+        {
+            InitializeComponent();
+            this.modo = 1;
+            this.articulo = artic;
+            Text = "Detalle Articulo";
+            lblTituloNuevoArticulo.Text = "Ver Detalle Articulo";
         }
 
 
@@ -61,6 +71,18 @@ namespace TPWinForm_goncalves_gines
                     txtPrecio.Text = articulo.Precio.ToString();
                     cbxCategoria.SelectedValue = articulo.Categoria.Id;
                     cbxMarca.SelectedValue = articulo.Marca.Id;
+                    if(modo == 1)
+                    {
+                        txtCodigo.Enabled = false;
+                        txtNombre.Enabled = false;
+                        txtDescripcion.Enabled = false;
+                        txtImagenURL.Enabled = false;
+                        txtPrecio.Enabled = false;
+                        cbxCategoria.Enabled = false;
+                        cbxMarca.Enabled = false;
+                        btnAceptar.Visible = false;
+                        btnModificar.Visible = true;
+                    }
                 }
             }
             catch (Exception ex)
@@ -189,6 +211,21 @@ namespace TPWinForm_goncalves_gines
             if (txtPrecio.Text == "") 
                 txtPrecio.BackColor = Color.DarkSalmon;
             else { txtPrecio.BackColor = System.Drawing.SystemColors.Control; }
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            txtCodigo.Enabled = true;
+            txtNombre.Enabled = true;
+            txtDescripcion.Enabled = true;
+            txtImagenURL.Enabled = true;
+            txtPrecio.Enabled = true;
+            cbxCategoria.Enabled = true;
+            cbxMarca.Enabled = true;
+            btnAceptar.Visible = true;
+            btnModificar.Visible = false;
+            Text = "Modificar Articulo";
+            lblTituloNuevoArticulo.Text = "Modificar Articulo";
         }
     }
 }

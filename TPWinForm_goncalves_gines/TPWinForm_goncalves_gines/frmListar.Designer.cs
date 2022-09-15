@@ -71,11 +71,12 @@
             this.dgvArticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvArticulos.Size = new System.Drawing.Size(748, 339);
             this.dgvArticulos.TabIndex = 1;
+            this.dgvArticulos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvArticulos_CellDoubleClick);
             this.dgvArticulos.SelectionChanged += new System.EventHandler(this.dgvArticulos_SelectionChanged);
             // 
             // btnCancelarListar
             // 
-            this.btnCancelarListar.Location = new System.Drawing.Point(386, 521);
+            this.btnCancelarListar.Location = new System.Drawing.Point(653, 521);
             this.btnCancelarListar.Name = "btnCancelarListar";
             this.btnCancelarListar.Size = new System.Drawing.Size(107, 38);
             this.btnCancelarListar.TabIndex = 2;
@@ -94,7 +95,7 @@
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(134, 521);
+            this.btnModificar.Location = new System.Drawing.Point(142, 521);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(107, 38);
             this.btnModificar.TabIndex = 4;
@@ -114,7 +115,7 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(260, 521);
+            this.btnEliminar.Location = new System.Drawing.Point(270, 521);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(107, 38);
             this.btnEliminar.TabIndex = 6;
@@ -223,7 +224,7 @@
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Listar";
+            this.Text = "Listado";
             this.Load += new System.EventHandler(this.frmListar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxArticulo)).EndInit();

@@ -34,8 +34,7 @@ namespace TPWinForm_goncalves_gines
             cboCampo.Items.Add("Categoría");
             cboCampo.Items.Add("Precio");
             cboCampo.SelectedIndex = -1;
-            cboCriterio.SelectedIndex = -1;
-
+           
         }
         
         private void cargar()
@@ -47,6 +46,7 @@ namespace TPWinForm_goncalves_gines
                 dgvArticulos.DataSource = listaArticulo;
                 ocultarColumnas();
                 cargarImagen(listaArticulo[0].ImagenUrl);
+                limpiarFiltros();
             }
             catch (Exception ex)
             {
@@ -58,8 +58,21 @@ namespace TPWinForm_goncalves_gines
         {
             dgvArticulos.Columns["ImagenUrl"].Visible = false;
             dgvArticulos.Columns["Id"].Visible = false;
+            dgvArticulos.Columns["Código"].Width = 50;
+            dgvArticulos.Columns["Descripción"].Width = 50;
+            dgvArticulos.Columns["Marca"].Width = 20;
+            dgvArticulos.Columns["Categoría"].Width = 20;
+            dgvArticulos.Columns["Precio"].Width = 10;
         }
 
+        private void limpiarFiltros()
+        {
+            cboCampo.SelectedIndex = -1;
+            cboCriterio.SelectedIndex = -1;
+            btnModificar.Enabled = true;
+            btnEliminar.Enabled = true;
+            txtFiltroAvanzado.Text = null;
+        }
 
 
         private void cargarImagen(string imagen)
@@ -159,21 +172,24 @@ namespace TPWinForm_goncalves_gines
 
         private void cboCampo_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string opcion = cboCampo.SelectedItem.ToString();
-            if (opcion == "Precio")
+            if(cboCampo.SelectedItem != null)
             {
-                cboCriterio.Items.Clear();
-                cboCriterio.Items.Add("Mayor a");
-                cboCriterio.Items.Add("Menor a");
-                cboCriterio.Items.Add("Igual a");
-            }
-            else
-            {
-                cboCriterio.Items.Clear();
-                cboCriterio.Items.Add("Comienza con");
-                cboCriterio.Items.Add("Termina con");
-                cboCriterio.Items.Add("Contiene");
-            }
+                string opcion = cboCampo.SelectedItem.ToString();
+                if (opcion == "Precio")
+                {
+                    cboCriterio.Items.Clear();
+                    cboCriterio.Items.Add("Mayor a");
+                    cboCriterio.Items.Add("Menor a");
+                    cboCriterio.Items.Add("Igual a");
+                }
+                else
+                {
+                    cboCriterio.Items.Clear();
+                    cboCriterio.Items.Add("Comienza con");
+                    cboCriterio.Items.Add("Termina con");
+                    cboCriterio.Items.Add("Contiene");
+                }
+            }            
         }
 
         private bool validarFiltro()
@@ -212,6 +228,25 @@ namespace TPWinForm_goncalves_gines
                     return false;
             }
             return true;
+        }
+
+        private void dgvArticulos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Articulo seleccionado;
+            try
+            {
+                if (dgvArticulos.CurrentRow.DataBoundItem != null)
+                {
+                    seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+                    frmAgregar modificar = new frmAgregar(seleccionado,1);
+                    modificar.ShowDialog();
+                    cargar();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
     }
 }
