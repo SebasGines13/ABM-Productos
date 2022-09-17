@@ -34,7 +34,7 @@ namespace TPWinForm_goncalves_gines
             cboCampo.Items.Add("Categoría");
             cboCampo.Items.Add("Precio");
             cboCampo.SelectedIndex = -1;
-           
+            dgvArticulos.Columns["Precio"].DefaultCellStyle.Format = "C";
         }
         
         private void cargar()

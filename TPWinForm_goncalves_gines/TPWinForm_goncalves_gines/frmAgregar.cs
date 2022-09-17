@@ -15,7 +15,7 @@ namespace TPWinForm_goncalves_gines
 {
     public partial class frmAgregar : Form
     {
-        private Articulo articulo = null;
+        private Articulo articulo = null;       
         private int modo = 0;
         public frmAgregar()
         {
@@ -27,6 +27,7 @@ namespace TPWinForm_goncalves_gines
             InitializeComponent();
             this.articulo = artic;
             Text = "Modificar Articulo";
+            txtCodigo.ReadOnly = true;
             lblTituloNuevoArticulo.Text = "Modificar Articulo";
         }
 
@@ -50,8 +51,7 @@ namespace TPWinForm_goncalves_gines
             MarcaNegocio marcaNegocio = new MarcaNegocio();
             CategoriaNegocio categoriaNegocio = new CategoriaNegocio();
             try
-            {
-                
+            {              
                 cbxMarca.DataSource = marcaNegocio.listar();
                 cbxMarca.ValueMember = "Id";
                 cbxMarca.DisplayMember = "Descripcion";
@@ -89,6 +89,23 @@ namespace TPWinForm_goncalves_gines
             {
                 MessageBox.Show(ex.ToString());
             }
+        }      
+
+        private bool esCodigoUnico()
+        {
+            List<Articulo> listaArticulo;
+            ArticuloNegocio negocio = new ArticuloNegocio();
+            listaArticulo = negocio.listar();
+            string aux = txtCodigo.Text;
+
+            foreach ( Articulo item in listaArticulo)
+            {
+                if (item.Codigo == aux) 
+                {
+                    return true;
+                }              
+            }
+            return false;
         }
 
         private bool validarNulosOVacios()
@@ -107,11 +124,19 @@ namespace TPWinForm_goncalves_gines
                 msj += "\nFalta cargar el campo Precio";
             if (!(Decimal.TryParse(txtPrecio.Text, out number)))
                 msj += "\nSolo puede ingresar numeros en el campo Precio";
+            if (number <= 0)
+                msj += "\nEl precio debe ser mayor a cero";
             if (cbxMarca.SelectedIndex < 0)
                 msj += "\nDebe seleccionar un valor para Marca";
             if (cbxCategoria.SelectedIndex < 0)
                 msj += "\nDebe seleccionar un valor para Categoria";
-            if(msj != null) 
+            if (articulo.Id == 0)
+            {
+                if (esCodigoUnico())
+                    msj += "\nEl codigo ya existe en otro Articulo";
+            }
+            
+            if (msj != null)
                 MessageBox.Show(msj);
             return string.IsNullOrEmpty(msj);
         }
@@ -132,9 +157,9 @@ namespace TPWinForm_goncalves_gines
                 articulo.Categoria = (Categoria)cbxCategoria.SelectedItem;
                 articulo.Precio = decimal.Parse(txtPrecio.Text);
                 if (articulo.Id != 0)
-                {
+                {                 
                     if (validarNulosOVacios())
-                    {
+                    {   
                         artNegocio.Modificar(articulo);
                         MessageBox.Show("¡Modificado exitosamente!");
                         Close();
@@ -162,7 +187,6 @@ namespace TPWinForm_goncalves_gines
             }
         }
 
-
         private void cargarImagen(string imagen)
         {
             try
@@ -182,7 +206,7 @@ namespace TPWinForm_goncalves_gines
             else            
                 txtImagenURL.BackColor = System.Drawing.SystemColors.Control;
             cargarImagen(txtImagenURL.Text);        
-    }
+        }
 
         private void txtCodigo_Leave(object sender, EventArgs e)
         {

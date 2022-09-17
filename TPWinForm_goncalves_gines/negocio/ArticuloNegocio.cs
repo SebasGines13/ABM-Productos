@@ -11,7 +11,7 @@ namespace negocio
 {
     public class ArticuloNegocio
     {
-        // clase para el acceso a datos para la clase Pokemon
+        // clase para el acceso a datos para la clase Articulo
         public List<Articulo> listar()
         {
             List<Articulo> lista = new List<Articulo>();
@@ -51,7 +51,7 @@ namespace negocio
             }
             catch (Exception ex)
             {
-                throw;
+                throw ex;
             }
             finally
             {
