@@ -63,6 +63,7 @@
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.TLSMenu;
             this.Name = "frmPrincipal";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.TLSMenu.ResumeLayout(false);
             this.TLSMenu.PerformLayout();
             this.ResumeLayout(false);

@@ -27,16 +27,28 @@ namespace TPWinForm_goncalves_gines
 
         private void frmListar_Load(object sender, EventArgs e)
         {
+            dgvStyle();
             cargar();
             cboCampo.Items.Add("Código");
             cboCampo.Items.Add("Descripción");
             cboCampo.Items.Add("Marca");
             cboCampo.Items.Add("Categoría");
             cboCampo.Items.Add("Precio");
-            cboCampo.SelectedIndex = -1;
+            cboCampo.SelectedIndex = -1;          
             dgvArticulos.Columns["Precio"].DefaultCellStyle.Format = "C";
         }
         
+        void dgvStyle()
+        {
+            dgvArticulos.BorderStyle = BorderStyle.None;
+            dgvArticulos.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            dgvArticulos.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgvArticulos.DefaultCellStyle.SelectionBackColor = Color.DimGray;          
+            dgvArticulos.BackgroundColor = Color.FromArgb(30, 30, 30);
+            dgvArticulos.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing; //op
+           
+        }
+
         private void cargar()
         {
             ArticuloNegocio negocio = new ArticuloNegocio();
@@ -232,7 +244,7 @@ namespace TPWinForm_goncalves_gines
             {
                 if (dgvArticulos.CurrentRow.DataBoundItem != null)
                 {
-                    seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+                    seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;                 
                     frmAgregar modificar = new frmAgregar(seleccionado,1);
                     modificar.ShowDialog();
                     cargar();

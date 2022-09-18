@@ -54,30 +54,41 @@
             // lblTituloNuevoArticulo
             // 
             resources.ApplyResources(this.lblTituloNuevoArticulo, "lblTituloNuevoArticulo");
+            this.lblTituloNuevoArticulo.BackColor = System.Drawing.Color.Transparent;
+            this.lblTituloNuevoArticulo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lblTituloNuevoArticulo.Name = "lblTituloNuevoArticulo";
             // 
             // lblDescripcion
             // 
             resources.ApplyResources(this.lblDescripcion, "lblDescripcion");
+            this.lblDescripcion.BackColor = System.Drawing.Color.Transparent;
+            this.lblDescripcion.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lblDescripcion.Name = "lblDescripcion";
             // 
             // lblNombre
             // 
             resources.ApplyResources(this.lblNombre, "lblNombre");
+            this.lblNombre.BackColor = System.Drawing.Color.Transparent;
+            this.lblNombre.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lblNombre.Name = "lblNombre";
             // 
             // lblCodigo
             // 
             resources.ApplyResources(this.lblCodigo, "lblCodigo");
+            this.lblCodigo.BackColor = System.Drawing.Color.Transparent;
+            this.lblCodigo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lblCodigo.Name = "lblCodigo";
             // 
             // lblImagenUrl
             // 
             resources.ApplyResources(this.lblImagenUrl, "lblImagenUrl");
+            this.lblImagenUrl.BackColor = System.Drawing.Color.Transparent;
+            this.lblImagenUrl.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lblImagenUrl.Name = "lblImagenUrl";
             // 
             // txtCodigo
             // 
+            this.txtCodigo.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.txtCodigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             resources.ApplyResources(this.txtCodigo, "txtCodigo");
             this.txtCodigo.Name = "txtCodigo";
@@ -85,19 +96,21 @@
             // 
             // txtNombre
             // 
+            this.txtNombre.BackColor = System.Drawing.SystemColors.ScrollBar;
             resources.ApplyResources(this.txtNombre, "txtNombre");
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Leave += new System.EventHandler(this.txtNombre_Leave);
             // 
             // txtDescripcion
             // 
+            this.txtDescripcion.BackColor = System.Drawing.SystemColors.ScrollBar;
             resources.ApplyResources(this.txtDescripcion, "txtDescripcion");
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Leave += new System.EventHandler(this.txtDescripcion_Leave);
             // 
             // txtImagenURL
             // 
-            this.txtImagenURL.BackColor = System.Drawing.SystemColors.Window;
+            this.txtImagenURL.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.txtImagenURL.ForeColor = System.Drawing.SystemColors.WindowText;
             resources.ApplyResources(this.txtImagenURL, "txtImagenURL");
             this.txtImagenURL.Name = "txtImagenURL";
@@ -105,6 +118,7 @@
             // 
             // cbxMarca
             // 
+            this.cbxMarca.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.cbxMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxMarca.FormattingEnabled = true;
             resources.ApplyResources(this.cbxMarca, "cbxMarca");
@@ -112,6 +126,7 @@
             // 
             // cbxCategoria
             // 
+            this.cbxCategoria.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.cbxCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxCategoria.FormattingEnabled = true;
             resources.ApplyResources(this.cbxCategoria, "cbxCategoria");
@@ -127,6 +142,7 @@
             // btnCancelarAgregar
             // 
             resources.ApplyResources(this.btnCancelarAgregar, "btnCancelarAgregar");
+            this.btnCancelarAgregar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnCancelarAgregar.Name = "btnCancelarAgregar";
             this.btnCancelarAgregar.UseVisualStyleBackColor = true;
             this.btnCancelarAgregar.Click += new System.EventHandler(this.btnCancelarAgregar_Click_1);
@@ -134,15 +150,20 @@
             // lblCategoria
             // 
             resources.ApplyResources(this.lblCategoria, "lblCategoria");
+            this.lblCategoria.BackColor = System.Drawing.Color.Transparent;
+            this.lblCategoria.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lblCategoria.Name = "lblCategoria";
             // 
             // lblMarca
             // 
             resources.ApplyResources(this.lblMarca, "lblMarca");
+            this.lblMarca.BackColor = System.Drawing.Color.Transparent;
+            this.lblMarca.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lblMarca.Name = "lblMarca";
             // 
             // pbxArticulo
             // 
+            this.pbxArticulo.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.pbxArticulo, "pbxArticulo");
             this.pbxArticulo.Name = "pbxArticulo";
             this.pbxArticulo.TabStop = false;
@@ -150,10 +171,13 @@
             // lblPrecio
             // 
             resources.ApplyResources(this.lblPrecio, "lblPrecio");
+            this.lblPrecio.BackColor = System.Drawing.Color.Transparent;
+            this.lblPrecio.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lblPrecio.Name = "lblPrecio";
             // 
             // txtPrecio
             // 
+            this.txtPrecio.BackColor = System.Drawing.SystemColors.ScrollBar;
             resources.ApplyResources(this.txtPrecio, "txtPrecio");
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Leave += new System.EventHandler(this.txtPrecio_Leave);
@@ -161,6 +185,7 @@
             // btnModificar
             // 
             resources.ApplyResources(this.btnModificar, "btnModificar");
+            this.btnModificar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.UseVisualStyleBackColor = true;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);

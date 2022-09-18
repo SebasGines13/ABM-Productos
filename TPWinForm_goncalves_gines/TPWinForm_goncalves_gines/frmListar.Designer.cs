@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListar));
             this.lblTituloListar = new System.Windows.Forms.Label();
             this.dgvArticulos = new System.Windows.Forms.DataGridView();
             this.btnCancelarListar = new System.Windows.Forms.Button();
@@ -53,16 +54,21 @@
             this.lblTituloListar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTituloListar.AutoSize = true;
-            this.lblTituloListar.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTituloListar.Location = new System.Drawing.Point(12, 23);
+            this.lblTituloListar.BackColor = System.Drawing.Color.Transparent;
+            this.lblTituloListar.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloListar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblTituloListar.Location = new System.Drawing.Point(12, 24);
             this.lblTituloListar.Name = "lblTituloListar";
-            this.lblTituloListar.Size = new System.Drawing.Size(252, 32);
+            this.lblTituloListar.Size = new System.Drawing.Size(327, 37);
             this.lblTituloListar.TabIndex = 0;
             this.lblTituloListar.Text = "Listado de Articulos";
             this.lblTituloListar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // dgvArticulos
             // 
+            this.dgvArticulos.BackgroundColor = System.Drawing.Color.Black;
+            this.dgvArticulos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgvArticulos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             this.dgvArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvArticulos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvArticulos.Location = new System.Drawing.Point(12, 157);
@@ -76,7 +82,9 @@
             // 
             // btnCancelarListar
             // 
-            this.btnCancelarListar.Location = new System.Drawing.Point(653, 521);
+            this.btnCancelarListar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelarListar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnCancelarListar.Location = new System.Drawing.Point(1027, 521);
             this.btnCancelarListar.Name = "btnCancelarListar";
             this.btnCancelarListar.Size = new System.Drawing.Size(107, 38);
             this.btnCancelarListar.TabIndex = 2;
@@ -86,16 +94,19 @@
             // 
             // pbxArticulo
             // 
-            this.pbxArticulo.Location = new System.Drawing.Point(766, 157);
+            this.pbxArticulo.BackColor = System.Drawing.Color.Transparent;
+            this.pbxArticulo.Location = new System.Drawing.Point(766, 96);
             this.pbxArticulo.Name = "pbxArticulo";
-            this.pbxArticulo.Size = new System.Drawing.Size(448, 339);
+            this.pbxArticulo.Size = new System.Drawing.Size(448, 400);
             this.pbxArticulo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxArticulo.TabIndex = 3;
             this.pbxArticulo.TabStop = false;
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(142, 521);
+            this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnModificar.Location = new System.Drawing.Point(320, 521);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(107, 38);
             this.btnModificar.TabIndex = 4;
@@ -105,7 +116,9 @@
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(12, 521);
+            this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnAgregar.Location = new System.Drawing.Point(103, 521);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(107, 38);
             this.btnAgregar.TabIndex = 5;
@@ -115,7 +128,9 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(270, 521);
+            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnEliminar.Location = new System.Drawing.Point(540, 521);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(107, 38);
             this.btnEliminar.TabIndex = 6;
@@ -126,17 +141,20 @@
             // lblCampo
             // 
             this.lblCampo.AutoSize = true;
-            this.lblCampo.Location = new System.Drawing.Point(22, 24);
+            this.lblCampo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCampo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblCampo.Location = new System.Drawing.Point(11, 25);
             this.lblCampo.Name = "lblCampo";
-            this.lblCampo.Size = new System.Drawing.Size(43, 13);
+            this.lblCampo.Size = new System.Drawing.Size(60, 16);
             this.lblCampo.TabIndex = 7;
             this.lblCampo.Text = "Campo:";
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(608, 21);
+            this.btnBuscar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnBuscar.Location = new System.Drawing.Point(641, 16);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscar.Size = new System.Drawing.Size(86, 28);
             this.btnBuscar.TabIndex = 10;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
@@ -144,6 +162,8 @@
             // 
             // gboFiltros
             // 
+            this.gboFiltros.BackColor = System.Drawing.Color.Black;
+            this.gboFiltros.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.gboFiltros.Controls.Add(this.txtFiltroAvanzado);
             this.gboFiltros.Controls.Add(this.cboCriterio);
             this.gboFiltros.Controls.Add(this.lblCriterio);
@@ -151,6 +171,8 @@
             this.gboFiltros.Controls.Add(this.btnBuscar);
             this.gboFiltros.Controls.Add(this.lblFiltro);
             this.gboFiltros.Controls.Add(this.lblCampo);
+            this.gboFiltros.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gboFiltros.ForeColor = System.Drawing.SystemColors.ScrollBar;
             this.gboFiltros.Location = new System.Drawing.Point(12, 96);
             this.gboFiltros.Name = "gboFiltros";
             this.gboFiltros.Size = new System.Drawing.Size(748, 55);
@@ -160,16 +182,18 @@
             // 
             // txtFiltroAvanzado
             // 
-            this.txtFiltroAvanzado.Location = new System.Drawing.Point(438, 21);
+            this.txtFiltroAvanzado.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.txtFiltroAvanzado.Location = new System.Drawing.Point(461, 25);
             this.txtFiltroAvanzado.Name = "txtFiltroAvanzado";
-            this.txtFiltroAvanzado.Size = new System.Drawing.Size(147, 20);
+            this.txtFiltroAvanzado.Size = new System.Drawing.Size(156, 20);
             this.txtFiltroAvanzado.TabIndex = 18;
             // 
             // cboCriterio
             // 
+            this.cboCriterio.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.cboCriterio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCriterio.FormattingEnabled = true;
-            this.cboCriterio.Location = new System.Drawing.Point(258, 21);
+            this.cboCriterio.Location = new System.Drawing.Point(282, 25);
             this.cboCriterio.Name = "cboCriterio";
             this.cboCriterio.Size = new System.Drawing.Size(121, 21);
             this.cboCriterio.TabIndex = 14;
@@ -177,17 +201,20 @@
             // lblCriterio
             // 
             this.lblCriterio.AutoSize = true;
-            this.lblCriterio.Location = new System.Drawing.Point(210, 24);
+            this.lblCriterio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCriterio.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblCriterio.Location = new System.Drawing.Point(215, 25);
             this.lblCriterio.Name = "lblCriterio";
-            this.lblCriterio.Size = new System.Drawing.Size(42, 13);
+            this.lblCriterio.Size = new System.Drawing.Size(61, 16);
             this.lblCriterio.TabIndex = 17;
             this.lblCriterio.Text = "Criterio:";
             // 
             // cboCampo
             // 
+            this.cboCampo.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.cboCampo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCampo.FormattingEnabled = true;
-            this.cboCampo.Location = new System.Drawing.Point(71, 21);
+            this.cboCampo.Location = new System.Drawing.Point(77, 25);
             this.cboCampo.Name = "cboCampo";
             this.cboCampo.Size = new System.Drawing.Size(121, 21);
             this.cboCampo.TabIndex = 11;
@@ -196,9 +223,11 @@
             // lblFiltro
             // 
             this.lblFiltro.AutoSize = true;
-            this.lblFiltro.Location = new System.Drawing.Point(409, 24);
+            this.lblFiltro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFiltro.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblFiltro.Location = new System.Drawing.Point(409, 26);
             this.lblFiltro.Name = "lblFiltro";
-            this.lblFiltro.Size = new System.Drawing.Size(32, 13);
+            this.lblFiltro.Size = new System.Drawing.Size(46, 16);
             this.lblFiltro.TabIndex = 19;
             this.lblFiltro.Text = "Filtro:";
             // 
@@ -207,6 +236,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1227, 576);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnAgregar);

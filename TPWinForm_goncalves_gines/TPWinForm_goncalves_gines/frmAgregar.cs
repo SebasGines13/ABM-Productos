@@ -15,7 +15,8 @@ namespace TPWinForm_goncalves_gines
 {
     public partial class frmAgregar : Form
     {
-        private Articulo articulo = null;       
+        private Articulo articulo = null;
+        //private Articulo artInicial = null;
         private int modo = 0;
         public frmAgregar()
         {
@@ -28,16 +29,17 @@ namespace TPWinForm_goncalves_gines
             this.articulo = artic;
             Text = "Modificar Articulo";
             txtCodigo.ReadOnly = true;
-            lblTituloNuevoArticulo.Text = "Modificar Articulo";
+            lblTituloNuevoArticulo.Text = "Modificar Articulo";           
         }
 
         public frmAgregar(Articulo artic, int modo)
         {
             InitializeComponent();
             this.modo = 1;
-            this.articulo = artic;
+            this.articulo = artic;           
             Text = "Detalle Articulo";
             lblTituloNuevoArticulo.Text = "Ver Detalle Articulo";
+            txtCodigo.ReadOnly = true;
         }
 
 
@@ -71,6 +73,7 @@ namespace TPWinForm_goncalves_gines
                     txtPrecio.Text = articulo.Precio.ToString();
                     cbxCategoria.SelectedValue = articulo.Categoria.Id;
                     cbxMarca.SelectedValue = articulo.Marca.Id;
+                    //artInicial = articulo;
                     if(modo == 1)
                     {
                         txtCodigo.Enabled = false;
@@ -141,9 +144,16 @@ namespace TPWinForm_goncalves_gines
             return string.IsNullOrEmpty(msj);
         }
 
+        /*private bool sonIdenticos()
+        {
+            if ((artInicial.Nombre == articulo.Nombre) && (artInicial.Descripcion == articulo.Descripcion) && (artInicial.ImagenUrl == articulo.ImagenUrl))
+                if ((artInicial.Precio == articulo.Precio) && (artInicial.Marca == articulo.Marca) && (artInicial.Categoria == articulo.Categoria))
+                    return true;
+            return false;
+        }*/
+    
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-
             ArticuloNegocio artNegocio = new ArticuloNegocio();
             try
             {
@@ -157,13 +167,13 @@ namespace TPWinForm_goncalves_gines
                 articulo.Categoria = (Categoria)cbxCategoria.SelectedItem;
                 articulo.Precio = decimal.Parse(txtPrecio.Text);
                 if (articulo.Id != 0)
-                {                 
+                {                                       
                     if (validarNulosOVacios())
                     {   
                         artNegocio.Modificar(articulo);
                         MessageBox.Show("¡Modificado exitosamente!");
                         Close();
-                    }
+                    }                                            
                 }
                 else
                 {
@@ -186,7 +196,7 @@ namespace TPWinForm_goncalves_gines
                 MessageBox.Show(ex.ToString());
             }
         }
-
+        
         private void cargarImagen(string imagen)
         {
             try
